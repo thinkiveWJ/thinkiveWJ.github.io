@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>资源列表</title>
+  <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+  <div class="resource-list appeals text-center">
+    <ul class="theme-bg white">
+      <li>Id</li>
+      <li>客户姓名</li>
+      <li>手机号码</li>
+      <li>咨询类型</li>
+      <li>诉求详情</li>   
+    </ul>
+    <ul>
+      <li>7956</li>
+      <li>张女士</li>
+      <li>18678967878</li>
+      <li>公司注册</li>
+      <li>
+        <a href="" class="assign">查看</a>
+      </li>                                                   
+    </ul>
+    <ul>
+      <li>7956</li>
+      <li>张女士</li>
+      <li>18678967878</li>
+      <li>公司注册</li>
+      <li>
+        <a href="" class="assign">查看</a>
+      </li>                                                   
+    </ul>
+    <ul>
+      <li>7956</li>
+      <li>张女士</li>
+      <li>18678967878</li>
+      <li>公司注册</li>
+      <li>
+        <a href="" class="assign">查看</a>
+      </li>                                                   
+    </ul>
+  </div>
+  <div class="dialog none">
+    <div class="text-right">
+      <i class="iconfont">&#xe627;</i>
+    </div>
+    <div class="lh30 mt8">
+      客户咨询提醒 时间：2021年05月06日 姓名：未知 
+      电话：18385118393 咨询类型：注册公司 诉求：
+      客户想注册一家公司 主营白酒 相关资料正在准备 
+      问注册公司费用和流程 有注册地址 您处理该信息后，
+      请点击：http://crm.ezcezc.com/oauth2qyh?
+      yyid=367434
+    </div>
+  </div>
+  <div class="dialog-bg none"></div>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function(){
+      $(".appeals > ul a").click(function(e){
+        $(".dialog,.dialog-bg").fadeIn();
+        e.preventDefault();
+      });
+      $(".dialog-bg,.dialog .iconfont").click(function(){
+        $(".dialog-bg,.dialog").fadeOut();
+      });
+    });
+  </script>
+</body>
+</html>

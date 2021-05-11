@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>资源添加</title>
+  <link rel="stylesheet" href="../plugins/ICalendar/css/lCalendar.css">
+  <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+  <form class="plr12 resource-add pt20">
+    <dl>
+      <dt class="">角色组:</dt>
+      <dd>
+        <select class="w100">
+          <option value="注册公司">注册公司</option>
+          <option value="注册公司1">注册公司1</option>
+          <option value="注册公司2">注册公司2</option>
+        </select>
+      </dd>
+    </dl>
+    <dl>
+      <dt class="">客户姓名:</dt>
+      <dd>
+        <input type="text" class="w100">
+      </dd>
+    </dl>
+    <dl>
+      <dt class="">手机号码:</dt>
+      <dd>
+        <input type="text" class="w100">
+      </dd>
+    </dl>
+    <dl>
+      <dt class="">客户咨询时间:</dt>
+      <dd>
+        <input id="dateTime" type="text" class="w100" readonly="" name="input_date" 
+          data-lcalendar="2020-01-01,2100-12-31" value="2021-05-11 15:08:25"/>
+        <!-- <input type="text" class="w100" value="2021-05-11 15:08:25"> -->
+      </dd>
+    </dl>
+    <dl>
+      <dt class="">诉求详情:</dt>
+      <dd>
+        <textarea class="w100"></textarea>
+      </dd>
+    </dl>
+    <dl>
+      <dt>状态:</dt>
+      <dd>
+        <label name="status" class="radio checked">正常</label>
+        <label name="status" class="ml12 radio">隐藏 </label>
+      </dd>
+    </dl>
+    <div class="flex mt105">
+      <a href="" class="reset-btn">重置</a>
+      <a href="" class="ok-btn theme-bg white">确定</a>
+    </div>
+  </form>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../plugins/ICalendar/js/lCalendar.js"></script>
+  <script>
+    $(function(){
+
+      var calendar = new lCalendar();
+			calendar.init({
+        'trigger': '#dateTime',
+				'type': 'datetime'
+      });
+      // 切换单选框状态
+      $("label[name=status]").click(function(){
+        $(this).addClass("checked").siblings().removeClass("checked");
+      });
+
+    });
+  </script>
+</body>
+</html>
